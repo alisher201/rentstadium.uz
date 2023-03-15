@@ -16,6 +16,7 @@ export class ComfortService {
   }
 
   async findOne(id:number) {
+    console.log("changed")
     return await this.comfortRepo.findOne({
       where:{
         id:id
