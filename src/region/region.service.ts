@@ -8,7 +8,7 @@ import { UpdateRegionDto } from './dto/update-region.dto';
 export class RegionService {
 
   constructor(@InjectModel(Region)private regionRepo: typeof Region){}
- async create(createRegionDto: CreateRegionDto) {
+     async create(createRegionDto: CreateRegionDto) {
 
     return await this.regionRepo.create(createRegionDto);
   }
@@ -17,7 +17,7 @@ export class RegionService {
     return await this.regionRepo.findAll()
   }
 
-  async findeOne(id:number){
+  async findOne(id:number){
     return await this.regionRepo.findOne({
       where:{
         id:id

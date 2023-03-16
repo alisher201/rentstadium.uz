@@ -1,3 +1,4 @@
+import { RegionModule } from './region/region.module';
 import { Region } from './region/models/region.models';
 import { Media } from './media/model/media.model';
 import { Comfort } from './comfort/models/comfort.models';
@@ -7,6 +8,8 @@ import { ConfigModule } from "@nestjs/config";
 import { SequelizeModule } from "@nestjs/sequelize"
 import { MediaModule } from './media/media.module';
 import { RegionService } from './region/region.service';
+import { ComfortStadiumModule } from './comfort_stadium/comfort_stadium.module';
+import { DistrictModule } from './district/district.module';
 
 
 
@@ -27,7 +30,9 @@ import { RegionService } from './region/region.service';
          }),
          ComfortModule,
          MediaModule,
-         RegionService
+         RegionModule,
+         ComfortStadiumModule,
+         DistrictModule
     ],
     controllers: [],
     providers: [],
