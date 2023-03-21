@@ -2,6 +2,7 @@
 import { Column, DataType, Model, Table } from "sequelize-typescript";
 
 interface RegionAttrebut {
+   id:number,
     name:string
 }
 

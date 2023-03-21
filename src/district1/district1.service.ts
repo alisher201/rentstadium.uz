@@ -1,14 +1,15 @@
-import { District } from './models/district.model';
+
 import { Injectable } from '@nestjs/common';
-import { CreateDistrictDto } from './dto/create-district.dto';
-import { UpdateDistrictDto } from './dto/update-district.dto';
 import { InjectModel } from '@nestjs/sequelize';
+import { CreateDistrict1Dto } from './dto/create-district1.dto';
+import { UpdateDistrict1Dto } from './dto/update-district1.dto';
+import { District } from './model/district1.model';
 
 @Injectable()
-export class DistrictService {
+export class District1Service {
 
   constructor (@InjectModel(District)private districtrepo:typeof District){}
-  async create(createDistrictDto: CreateDistrictDto) {
+  async create(createDistrictDto: CreateDistrict1Dto) {
     return await this.districtrepo.create(createDistrictDto);
   }
 
@@ -24,7 +25,7 @@ export class DistrictService {
     });
   }
 
-  async update(id: number, updateDistrictDto: UpdateDistrictDto) {
+  async update(id: number, updateDistrictDto: UpdateDistrict1Dto) {
     return await this.districtrepo.update(updateDistrictDto,{
       where:{
         id:id

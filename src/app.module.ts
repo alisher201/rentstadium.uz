@@ -9,7 +9,17 @@ import { SequelizeModule } from "@nestjs/sequelize"
 import { MediaModule } from './media/media.module';
 import { RegionService } from './region/region.service';
 import { ComfortStadiumModule } from './comfort_stadium/comfort_stadium.module';
-import { DistrictModule } from './district/district.module';
+import { AdminModule } from './admin/admin.module';
+import { CategoriesModule } from './categories/categories.module';
+import { StadiumsModule } from './stadiums/stadiums.module';
+import { CommentsModule } from './comments/comments.module';
+import { StadiumTimesModule } from './stadium_times/stadium_times.module';
+import { CartModule } from './cart/cart.module';
+import { UserCardsModule } from './user_cards/user_cards.module';
+import { OrdersModule } from './orders/orders.module';
+import { UsersModule } from './users/users.module';
+import { UserWalletModule } from './user_wallet/user_wallet.module';
+import { District1Module } from './district1/district1.module';
 
 
 
@@ -32,7 +42,17 @@ import { DistrictModule } from './district/district.module';
          MediaModule,
          RegionModule,
          ComfortStadiumModule,
-         DistrictModule
+         AdminModule,
+         CategoriesModule,
+         StadiumsModule,
+         CommentsModule,
+         StadiumTimesModule,
+         CartModule,
+         UserCardsModule,
+         OrdersModule,
+         UsersModule,
+         UserWalletModule,
+         District1Module
     ],
     controllers: [],
     providers: [],

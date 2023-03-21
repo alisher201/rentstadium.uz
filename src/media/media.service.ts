@@ -12,7 +12,7 @@ export class MediaService {
   }
 
   async  findAll() {
-    return this.mediaRepo.findAll();
+    return await this.mediaRepo.findAll();
   }
 
   async findOne(id: number) {
